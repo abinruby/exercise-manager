@@ -1,0 +1,5 @@
+express=a lightweight and fast web framework for Nodejs
+cors(cross origin resource sharing)=This allows ajax request to skip the same origin policy and acess resources from
+remote hosts.The cors package provides an express middleware that can enable cors with different options,
+which is going to make it so we can easily acess something outside of our server from our server
+mongoose-makes interacting with MongoDB through Nodejs Simpler
