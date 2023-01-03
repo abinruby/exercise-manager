@@ -2,7 +2,7 @@ const express=require('express');
 const cors=require('cors')
 const mongoose=require('mongoose')
 
-require('dotenv').config
+require('dotenv').config()
 
 const app=express();
 
@@ -11,7 +11,8 @@ const port=process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 mongoose.set('strictQuery', false);
-mongoose.connect(`${process.env.ATLAS_URI}`,()=>{console.log('database connected successfully');}) 
+mongoose.connect(`${process.env.ATLAS_URI}`)  
+.then(()=>console.log('DB coneected succesfully'))
 
 const exercisesRouter=require('./router/exercises')
 const usersRouter=require('./router/users')
